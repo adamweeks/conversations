@@ -9,8 +9,11 @@ const config = {
   entry: [
     'webpack/hot/dev-server',
     'webpack/hot/only-dev-server',
-    path.join(__dirname, '/src/app/app.js'),
+    path.join(__dirname, '/src/app/app.jsx'),
   ],
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
   // Server Configuration options
   devServer: {
     contentBase: 'src/www', // Relative directory for base of server
@@ -39,7 +42,7 @@ const config = {
     loaders: [
       {
         // React-hot loader and
-        test: /\.js$/, // All .js files
+        test: /\.jsx$/, // All .js files
         loaders: ['react-hot', 'babel-loader'], // react-hot is like browser sync and babel loads jsx and es6-7
         exclude: [nodeModulesPath],
       },
