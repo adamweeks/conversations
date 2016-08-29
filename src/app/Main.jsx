@@ -8,7 +8,7 @@ import {deepOrange500} from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import Master from './Master';
+import Content from './Content';
 import NavBar from './NavBar';
 
 const muiTheme = getMuiTheme({
@@ -46,7 +46,7 @@ class Main extends Component {
       <MuiThemeProvider muiTheme={muiTheme}>
         <div>
           <NavBar />
-          <Master />
+          <Content />
         </div>
       </MuiThemeProvider>
     );
