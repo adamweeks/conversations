@@ -1,11 +1,14 @@
 const webpack = require('webpack');
 const path = require('path');
-const buildPath = path.resolve(__dirname, 'build');
+const buildPath = path.resolve(__dirname, 'dist');
 const nodeModulesPath = path.resolve(__dirname, 'node_modules');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
 
 const config = {
-  entry: [path.join(__dirname, '/src/app/app.js')],
+  entry: [path.join(__dirname, '/src/app/app.jsx')],
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
   // Render source-map file for final build
   devtool: 'source-map',
   // output config
@@ -37,7 +40,7 @@ const config = {
   module: {
     loaders: [
       {
-        test: /\.js$/, // All .js files
+        test: /\.jsx$/, // All .js files
         loaders: ['babel-loader'], // react-hot is like browser sync and babel loads jsx and es6-7
         exclude: [nodeModulesPath],
       },
