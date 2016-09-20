@@ -6,7 +6,6 @@ class NavBar extends Component {
     return (
       <AppBar
         title="Conversations!"
-        iconClassNameRight="muidocs-icon-navigation-expand-more"
       />
     )
   }

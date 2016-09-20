@@ -3,6 +3,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import StarterDisplay from './StarterDisplay';
 
+import starters from './starters';
+
 const styles = {
   container: {
     textAlign: 'center',
@@ -10,7 +12,7 @@ const styles = {
   },
 };
 
-const greetings = ['hey','hello','sup','hi'];
+const conversations = starters;
 
 class Master extends Component {
   constructor(props) {
@@ -22,7 +24,7 @@ class Master extends Component {
   }
 
   getText() {
-    let text = greetings[Math.floor(Math.random()*greetings.length)];
+    let text = conversations[Math.floor(Math.random()*conversations.length)];
     this.setState({displayText: text});
   }
 

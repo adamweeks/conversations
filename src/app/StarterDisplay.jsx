@@ -4,7 +4,7 @@ class StarterDisplay extends Component {
   render() {
     return (
       <div>
-        {this.props.displayText}
+        <h3>{this.props.displayText}</h3>
       </div>
     );
   }
